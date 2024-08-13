@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+  -webkit-font-smoothing: antialialised;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  background-image: radial-gradient(white, rgb(24, 105, 116));
+  width: 100%;
+  max-width: 500px;
+  min-height: 100vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px black;
+  font-family: cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header,
+.footer {
+  background-color: rgba(0, 0, 0, 0.664);
+  color: rgba(245, 245, 245, 0.925);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 3rem;
+  padding: 10px;
+  align-items: center;
+
+}
+
+.header {
+  border-radius: 10px 10px 0 0;
+}
+
+.footer {
+  font-size: 1rem;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+.check{
+  font-size: 4rem;
+}
+.inputarea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputform {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.addinput,
+.searchinput {
+  font-size: 2rem;
+  padding: 5px;
+  margin: 2px 5px;
+  width: 90%;
+  border-radius: 10px;
+  outline: none;
+}
+
+.add {
+  font-size: 2rem;
+  padding: 4px;
+  border-radius: 8px;
+  margin-right: 3px;
+  background-color: coral;
+}
+
+.add:hover {
+  background-color: rgba(255, 127, 80, 0.829);
+  cursor: pointer;
+}
+
+.searchinput {
+  width: 70%;
+}
+
+.contents {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  overflow: auto;
+}
+
+.listcontent {
+  display: block;
+  width: 96%;
+  height: 60vh;
+}
+
+.listitems {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px;
+  font-size: 2rem;
+  padding: 10px;
+  background-color: rgba(24, 105, 116, 0.678);
+}
+
+.listitem {
+  width: 60%;
+  flex-grow: 1;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+  margin-left: 5px;
+}
+
+.editform {
+  display: flex;
+  font-size: 2rem;
+  padding: 1px;
+  width: 100%;
+  align-items: center;
+}
+
+.editinput {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  outline: none;
+  padding: 3px;
+  font-family: cursive;
+}
+
+#editbuttons {
+  color: #0a4745fd;
+  font-size: 2rem;
+}
+
+#editbuttons:hover {
+  cursor: pointer;
+  color: orangered;
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+
+  .header,
+  .footer {
+    border-radius: 0px;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  html {
+    font-size: 10px;
+  }
+
+  .header,
+  .footer {
+    border-radius: 0px;
+  }
+
+  .listcontent {
+    display: block;
+    width: 96%;
+    height: 0vh;
+  }
+
+
+}

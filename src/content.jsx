@@ -12,13 +12,12 @@ function Content({ todos, edit, edited, setEdited, handleCheck, toggleListUp, to
                     <ol>
                         {todos.map((todo, index) =>
                             <li key={index}
-
                                 className='listitems'>
+                                    {edit !== index &&
                                 <input
                                     className='checkbox'
                                     type="checkbox"
-                                    onClick={() => handleCheck(index)} />
-
+                                    onClick={() => handleCheck(index)} />}
                                 {edit === index ?
                                     (<div className='editform'>
                                         <input
@@ -51,7 +50,7 @@ function Content({ todos, edit, edited, setEdited, handleCheck, toggleListUp, to
                                          
                                                 <i
                                                     style={{
-                                                        fontSize: "1rem",
+                                                        fontSize: "0.5rem",
                                                         color: "black"
                                                     }}>
 

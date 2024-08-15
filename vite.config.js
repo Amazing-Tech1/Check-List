@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'my-custom-dist',
-     index: 'index.html'
+    index: 'index.html'
   }
+
 })

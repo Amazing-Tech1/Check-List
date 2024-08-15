@@ -50,7 +50,7 @@ function Content({ todos, edit, edited, setEdited, handleCheck, toggleListUp, to
                                          
                                                 <i
                                                     style={{
-                                                        fontSize: "0.5rem",
+                                                        fontSize: "0.75rem",
                                                         color: "black"
                                                     }}>
 

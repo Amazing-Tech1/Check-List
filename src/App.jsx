@@ -23,6 +23,9 @@ function App() {
       setTodos(t => [...t, { text: newtodos.trim(), completed: false, conpletedAt: null }]);
       setNewtodos("")
     }
+    else{
+      alert('Please enter a List')
+    }
   }
   function handleCheck(index) {
     const newtodos = [...todos]
@@ -60,15 +63,20 @@ function App() {
     setEdit(index)
     setEdited(todos[index])
     setEditIndex(index)
+   
 
   }
   function handleEditClick() {
+    if ((edited.text).trim() !== "") {
     const updatedTasks = [...todos];
     updatedTasks[editIndex].text = edited.text;
     setTodos(updatedTasks)
     setEditIndex(null)
     setEdit(false)
-
+    }
+    else{
+      alert('you cannot save an empty list')
+    }
   }
 
 

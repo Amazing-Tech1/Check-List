@@ -195,7 +195,10 @@ input[type="checkbox"] {
   html {
     font-size: 10px;
   }
-
+  .app{
+min-width: 100vw;
+  
+  }
   .header,
   .footer {
     border-radius: 0px;

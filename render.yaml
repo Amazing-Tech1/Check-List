@@ -1,4 +1,0 @@
-services:
-- type: web
-name: Check-List
-startCommand: npm run dev

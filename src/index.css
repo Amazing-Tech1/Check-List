@@ -8,7 +8,6 @@
 body {
   -webkit-font-smoothing: antialialised;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1rem;
 }
 
 #root {
@@ -58,9 +57,11 @@ body {
   bottom: 0;
   border-radius: 0px 0px 10px 10px;
 }
-.check{
+
+.check {
   font-size: 4rem;
 }
+
 .inputarea {
   width: 100%;
   display: flex;
@@ -112,7 +113,6 @@ body {
 .listcontent {
   display: block;
   width: 96%;
-  height: 60vh;
 }
 
 .listitems {
@@ -123,13 +123,12 @@ body {
   border-radius: 10px;
   width: 100%;
   margin: 7px;
-  font-size: 1.5rem;
   padding: 10px;
   background-color: rgba(24, 105, 116, 0.678);
 }
 
 .listitem {
-  width: 60%;
+  width: 50%;
   flex-grow: 1;
   white-space: normal;
   word-wrap: break-word;
@@ -143,36 +142,34 @@ input[type="checkbox"] {
 
 .editform {
   display: flex;
-  font-size: rem;
-  padding: 1px;
   width: 100%;
   align-items: center;
 }
 
 .editinput {
-  font-size: 1rem;
+  font-size: max(1vw, 10px);
   border-radius: 10px;
   outline: none;
   padding: 3px;
   width: 70%;
 }
 
-.editbutton{
-  font-size: 1rem;
+.editbutton {
   padding: 4px;
   border-radius: 8px;
   margin-right: 3px;
   background-color: coral;
   font-weight: bold;
 }
-.editbutton:hover{
+
+.editbutton:hover {
   cursor: pointer;
   background-color: rgba(255, 127, 80, 0.829);
 }
 
 #editbuttons {
   color: #0a4745fd;
-  font-size: 2rem;
+  font-size: max(1vw, 14px);
 }
 
 #editbuttons:hover {
@@ -181,9 +178,6 @@ input[type="checkbox"] {
 }
 
 @media only screen and (max-width: 500px) {
-  html {
-    font-size: 10px;
-  }
 
   .header,
   .footer {
@@ -192,13 +186,12 @@ input[type="checkbox"] {
 }
 
 @media only screen and (max-height: 500px) {
-  html {
-    font-size: 10px;
+
+  .app {
+    min-width: 100vw;
+
   }
-  .app{
-min-width: 100vw;
-  
-  }
+
   .header,
   .footer {
     border-radius: 0px;
@@ -209,6 +202,5 @@ min-width: 100vw;
     width: 96%;
     height: 0vh;
   }
-
 
 }

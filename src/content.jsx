@@ -13,11 +13,11 @@ function Content({ todos, edit, edited, setEdited, handleCheck, toggleListUp, to
                         {todos.map((todo, index) =>
                             <li key={index}
                                 className='listitems'>
-                                    {edit !== index &&
-                                <input
-                                    className='checkbox'
-                                    type="checkbox"
-                                    onClick={() => handleCheck(index)} />}
+                                {edit !== index &&
+                                    <input
+                                        className='checkbox'
+                                        type="checkbox"
+                                        onClick={() => handleCheck(index)} />}
                                 {edit === index ?
                                     (<div className='editform'>
                                         <input
@@ -47,16 +47,21 @@ function Content({ todos, edit, edited, setEdited, handleCheck, toggleListUp, to
                                 {
                                     todo.completedAt && (
                                         <>
-                                         
+                                            <div style={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                gap: "6px"
+                                            }}>
+
                                                 <i
                                                     style={{
-                                                        fontSize: "0.75rem",
+                                                        fontSize: "max(0.5vw, 7px)",
                                                         color: "black"
                                                     }}>
 
                                                     <b
                                                         style={{
-                                                            fontSize: "1rem"
+                                                            fontSize: "max(0.8vw, 9px)"
                                                         }}>Completed at:
                                                     </b>
                                                     {todo.completedAt}
@@ -64,10 +69,11 @@ function Content({ todos, edit, edited, setEdited, handleCheck, toggleListUp, to
                                                 </i>
                                                 <FaTrashAlt
                                                     style={{
-                                                        fontSize: "2rem"
+                                                        fontSize: "max(1vw, 14px)"
                                                     }}
                                                     id='editbuttons'
                                                     onClick={() => handleDelete(index)} />
+                                            </div>
                                         </>
                                     )
                                 }
